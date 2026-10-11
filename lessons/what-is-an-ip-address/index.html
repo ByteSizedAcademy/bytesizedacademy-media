@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What is an IP address? · Byte Sized Academy</title>
+<meta name="description" content="Every device online has an address, just like your house. Here&#x27;s how to read one.">
+<link rel="canonical" href="https://bytesizedacademy.org/lessons/what-is-an-ip-address/">
+<meta name="theme-color" content="#17120F">
+<meta property="og:site_name" content="Byte Sized Academy">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What is an IP address?">
+<meta property="og:description" content="Every device online has an address, just like your house. Here&#x27;s how to read one.">
+<meta property="og:url" content="https://bytesizedacademy.org/lessons/what-is-an-ip-address/">
+<meta property="og:image" content="https://bytesizedacademy.org/assets/thumbs/ep03.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="/assets/img/favicon-64.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "What is an IP address?", "description": "Every device online has an address, just like your house. Here's how to read one.", "learningResourceType": "video lesson", "educationalLevel": "Beginner", "datePublished": "2026-10-11", "isPartOf": {"@type": "CreativeWorkSeries", "name": "Network Bytes"}, "publisher": {"@type": "Organization", "name": "Byte Sized Academy", "url": "https://bytesizedacademy.org"}, "video": {"@type": "VideoObject", "name": "What is an IP address?", "description": "Every device online has an address, just like your house. Here's how to read one.", "thumbnailUrl": "https://bytesizedacademy.org/2026-10-11-ep03/thumbnail.png", "contentUrl": "https://bytesizedacademy.org/2026-10-11-ep03/video.mp4", "uploadDate": "2026-10-11"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="/"><img src="/assets/img/cookie-256.png" alt="" width="36" height="36"><span>Byte Sized <b>Academy</b></span></a>
+    <nav class="site-nav" aria-label="Main"><a href="/lessons/" aria-current="page">Lessons</a><a href="/about/">About</a><a class="btn btn-small" href="https://www.instagram.com/bytesizedacademyeducation/" rel="noopener" target="_blank">Follow</a></nav>
+  </div>
+</header>
+<main id="main">
+<article class="lesson wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/lessons/">Lessons</a><span aria-hidden="true">/</span><span>Network Bytes</span></nav>
+  <div class="lesson-grid">
+    <div class="lesson-video">
+      <div class="phone">
+        <video controls playsinline preload="metadata" poster="/2026-10-11-ep03/thumbnail.png" width="1080" height="1920">
+          <source src="/2026-10-11-ep03/video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-actions"><a class="btn btn-ghost" href="https://www.instagram.com/reel/DeXFAclkos5/" rel="noopener" target="_blank">Watch on Instagram</a></div>
+    </div>
+    <div class="lesson-text">
+      <p class="eyebrow">Network Bytes · Episode 3 · CCNA 1.6</p>
+      <h1>What is an IP address?</h1>
+      <p class="lede">Every device online has an address, just like your house. Here&#x27;s how to read one.</p>
+      <p class="meta muted">Posted October 11, 2026 · About a 1 minute watch, 2 minute read</p>
+      <div class="prose">
+<aside class="callout"><p><strong>In one bite:</strong> an IP address tells the network where to deliver data, the way a street address tells the mail carrier where to drop off a letter. A common kind looks like <code>192.168.1.25</code>.</p></aside>
+<h2 id="an-address-for-every-device">An address for every device</h2>
+<p>Every device that talks on a network needs an address, so data sent to it ends up in the right place. On networks and the internet, that's the <strong>IP address</strong> (IP stands for Internet Protocol, the set of rules for addressing and delivering data).</p>
+<p>Think of the mail. A letter without an address can't be delivered. Data is the same: no address, no delivery.</p>
+<h2 id="how-to-read-one">How to read one</h2>
+<p>The most common kind, called <strong>IPv4</strong>, is written as four numbers separated by dots:</p>
+<p><code>192.168.1.25</code></p>
+<p>Each of the four numbers can be anything from <strong>0 to 255</strong>. Why 255? Behind the scenes an IPv4 address is 32 bits (ones and zeros), split into four groups of 8 bits. Eight bits can count 256 different values, from 0 up to 255.</p>
+<p>The address has two parts:</p>
+<ul><li>The first part names the <strong>network</strong>, like the street. In <code>192.168.1.25</code>, that's usually <code>192.168.1</code>.</li><li>The last part names the <strong>device</strong> on that network, like the house number. Here, that's <code>25</code>.</li></ul>
+<p>Every device on the same home network shares the "street" part and gets its own "house number."</p>
+<h2 id="where-do-addresses-come-from">Where do addresses come from?</h2>
+<p>You almost never type one in yourself. When your phone joins your Wi-Fi, your router hands it an address automatically and remembers it for a while. That's called a <strong>lease</strong>. Leave home and come back tomorrow, and your phone may get a different address. Addresses handed out this way are called <strong>dynamic</strong>. Addresses that are set by hand and never change, which servers and printers often use, are called <strong>static</strong>.</p>
+<h2 id="try-it-yourself">Try it yourself</h2>
+<p>Open your phone's Wi-Fi settings and tap the network you're connected to. Look for <strong>IP address</strong>. It will probably start with <code>192.168</code> or <code>10.</code>, which are ranges set aside for home and office networks. Why those numbers show up everywhere is a whole lesson of its own, coming soon in this series.</p>
+<h2 id="good-to-know">Good to know</h2>
+<ul><li>This lesson covers <strong>IPv4</strong>. There's a newer, much longer kind of address called <strong>IPv6</strong>, made because the world was running out of IPv4 addresses. It gets its own episode later in the series.</li><li>"First part network, last part device" is a simplification. The exact split is set by something called a <strong>subnet mask</strong>, which we'll cover when we get to subnetting.</li><li>The automatic hand-out is done by a service called <strong>DHCP</strong>, which also gets its own episode.</li></ul>
+<h2 id="for-ccna-learners">For CCNA learners</h2>
+<p>This lines up with CCNA 200-301 exam topic <strong>1.6, configure and verify IPv4 addressing and subnetting</strong>. For now, get comfortable reading an address as four numbers from 0 to 255, with a network part and a device part.</p>
+      </div>
+      <section class="sources" aria-labelledby="sources"><h2 id="sources">Sources</h2><ul><li>Cloudflare Learning Center, <a href="https://www.cloudflare.com/learning/dns/glossary/what-is-my-ip-address/" rel="noopener" target="_blank">"What is my IP address?"</a>: IP addresses identify devices online; IPv4 is four numbers separated by dots; dynamic addresses are temporary</li><li>IETF, <a href="https://datatracker.ietf.org/doc/html/rfc791" rel="noopener" target="_blank">RFC 791, "Internet Protocol"</a>: IPv4 addresses are 32 bits, written as four 8-bit numbers from 0 to 255</li><li>Microsoft Learn, <a href="https://learn.microsoft.com/en-us/windows-server/networking/technologies/dhcp/dhcp-top" rel="noopener" target="_blank">"What is DHCP?"</a>: addresses are handed out automatically and leased, so they can change</li><li>Cisco, <a href="https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301-CCNA-v1.1.pdf" rel="noopener" target="_blank">CCNA 200-301 v1.1 exam topics</a>: 1.6 configure and verify IPv4 addressing</li></ul></section>
+      <nav class="pager" aria-label="More lessons"><a class="pager-prev" href="/lessons/router-vs-switch-vs-modem/"><span class="muted">Previous</span>Router vs switch vs modem</a><div class="pager-next is-soon"><span class="muted">Coming next</span>What is a MAC address?</div></nav>
+    </div>
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div>
+      <a class="brand" href="/"><img src="/assets/img/cookie-256.png" alt="" width="28" height="28"><span>Byte Sized <b>Academy</b></span></a>
+      <p class="muted">Your one-minute classroom. Big topics explained simply, in one minute or less.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="/lessons/">Lessons</a>
+      <a href="/about/">About</a>
+      <a href="https://www.instagram.com/bytesizedacademyeducation/" rel="noopener" target="_blank">Instagram</a>
+      <a href="mailto:info@bytesizedacademy.org">info@bytesizedacademy.org</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+    </nav>
+  </div>
+  <div class="wrap"><p class="fine">&copy; 2026 Byte Sized Academy</p></div>
+</footer>
+</body>
+</html>
