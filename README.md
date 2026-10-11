@@ -13,6 +13,6 @@ One folder per post, named `YYYY-MM-DD-epNN` (the post date, Pacific time, and t
 | `video.mp4` | The finished short (1080x1920, about 60 seconds) |
 | `thumbnail.png` | The cover image shown on the profile grid |
 
-This repo also hosts the website at **[bytesizedacademy.org](https://bytesizedacademy.org)** through GitHub Pages. See [site-src/README.md](site-src/README.md) for how it's built and how to add a lesson page.
+The website at **[bytesizedacademy.org](https://bytesizedacademy.org)** lives in [ByteSizedAcademy/bytesizedacademy](https://github.com/ByteSizedAcademy/bytesizedacademy) and plays these videos from **media.bytesizedacademy.org** (this repo, served by GitHub Pages).
 
 Files are added automatically by the posting script in the production pipeline. Please don't rename or delete folders of posted episodes, since Instagram may re-fetch them.
