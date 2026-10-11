@@ -29,6 +29,10 @@ We use small tools we built ourselves to publish our own videos to our own accou
 - don't collect, store or share data about other users or viewers;
 - keep access tokens private and use them only for posting.
 
+## Tips
+
+If you choose to support us, payments are handled by [Ko-fi]({{KOFI}}) and its payment providers (such as PayPal or Stripe), under Ko-fi's own privacy policy. We never see your card details. Ko-fi shares with us what any creator sees, such as your name or display name, email, the amount and any message you leave, and we use that only to thank you and answer questions about your support.
+
 ## Email
 
 If you email us at [info@bytesizedacademy.org](mailto:info@bytesizedacademy.org), we use your address and message only to reply, and we don't add you to any mailing list.
