@@ -1,6 +1,8 @@
 ---
 ep: 03
 slug: what-is-an-ip-address
+seo_title: What Is an IP Address? IP Addresses Explained Simply
+duration: PT1M4S
 title: What is an IP address?
 series: Network Bytes
 series_blurb: Networking from zero, one minute at a time. Follows the Cisco CCNA 200-301 exam topics.
@@ -59,3 +61,17 @@ This lines up with CCNA 200-301 exam topic **1.6, configure and verify IPv4 addr
 - IETF, [RFC 791, "Internet Protocol"](https://datatracker.ietf.org/doc/html/rfc791): IPv4 addresses are 32 bits, written as four 8-bit numbers from 0 to 255
 - Microsoft Learn, ["What is DHCP?"](https://learn.microsoft.com/en-us/windows-server/networking/technologies/dhcp/dhcp-top): addresses are handed out automatically and leased, so they can change
 - Cisco, [CCNA 200-301 v1.1 exam topics](https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301-CCNA-v1.1.pdf): 1.6 configure and verify IPv4 addressing
+
+## Transcript
+
+Every device on the internet has an address, just like your house.
+
+It's called an IP address. It tells the network where to deliver your data, the same way a street address tells the mail carrier where to drop off a letter.
+
+A common type looks like this: four numbers separated by dots, like 192.168.1.25. Each number goes from 0 to 255. The first part usually names the network, like your street. The last part names the device, like your house number.
+
+You almost never type one yourself. When your phone joins your Wi-Fi, the router hands it an address automatically. Leave and come back tomorrow, and you might get a different one.
+
+No address, no delivery. That's why every device online needs one.
+
+That's your bite. Next: the second address your device has, built in at the factory.

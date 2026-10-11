@@ -84,17 +84,17 @@ code{font-family:var(--mono);font-size:.92em;background:var(--panel);border:1px 
 .play::after{content:"";position:absolute;left:17px;top:13px;border-style:solid;border-width:9px 0 9px 14px;border-color:transparent transparent transparent var(--bg)}
 .card-body{display:flex;flex-direction:column;gap:6px;padding:16px 18px 20px}
 .card-body .eyebrow{margin:0;font-size:.72rem}
-.card-title{font:700 1.2rem/1.2 var(--display)}
+.card-title{font:700 1.2rem/1.2 var(--display);margin:0;letter-spacing:0}
 .card-text{color:var(--muted);font-size:.95rem;line-height:1.5}
 .steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;counter-reset:s}
 .steps li{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;counter-increment:s;display:flex;flex-direction:column;gap:6px}
 .steps li::before{content:counter(s);font:800 1.6rem/1 var(--display);color:var(--primary)}
-.steps b{font:700 1.15rem/1.2 var(--display)}
+.steps h3{font:700 1.15rem/1.2 var(--display);margin:0}
 .steps span{color:var(--muted)}
 .series-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .series{display:flex;flex-direction:column;gap:6px;padding:22px;border-radius:var(--radius);background:linear-gradient(135deg,rgba(255,122,26,.14),var(--panel) 60%);border:1px solid var(--line);color:var(--text);text-decoration:none}
 a.series:hover{border-color:var(--primary);color:var(--text)}
-.series b{font:700 1.3rem/1.2 var(--display)}
+.series h3{font:700 1.3rem/1.2 var(--display);margin:0}
 .series.is-soon{background:var(--panel);border-style:dashed}
 .series-blurb{margin-top:-8px}
 
@@ -150,3 +150,12 @@ a.series:hover{border-color:var(--primary);color:var(--text)}
 .support div{display:flex;flex-direction:column;gap:4px;flex:1 1 260px}
 .support b{font:700 1.2rem/1.2 var(--display)}
 .support span{color:#EADBC8;font-size:.97rem}
+
+/* transcript */
+.transcript{margin-top:20px;border:1px solid var(--line);border-radius:var(--radius);padding:4px 22px}
+.transcript summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.transcript summary::-webkit-details-marker{display:none}
+.transcript summary::after{content:"+";font:700 1.4rem/1 var(--display);color:var(--primary)}
+.transcript[open] summary::after{content:"–"}
+.transcript summary h2{font-size:1.2rem;margin:0}
+.transcript p{color:#EADBC8}

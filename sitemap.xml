@@ -1,2 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://bytesizedacademy.org/</loc></url><url><loc>https://bytesizedacademy.org/lessons/</loc></url><url><loc>https://bytesizedacademy.org/lessons/what-is-a-network/</loc></url><url><loc>https://bytesizedacademy.org/lessons/router-vs-switch-vs-modem/</loc></url><url><loc>https://bytesizedacademy.org/lessons/what-is-an-ip-address/</loc></url><url><loc>https://bytesizedacademy.org/about/</loc></url><url><loc>https://bytesizedacademy.org/privacy/</loc></url><url><loc>https://bytesizedacademy.org/terms/</loc></url></urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://bytesizedacademy.org/</loc>
+    <lastmod>2026-10-11</lastmod>
+  </url>
+  <url>
+    <loc>https://bytesizedacademy.org/lessons/</loc>
+    <lastmod>2026-10-11</lastmod>
+  </url>
+  <url>
+    <loc>https://bytesizedacademy.org/lessons/what-is-a-network/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://bytesizedacademy.org/2026-10-11-ep01/thumbnail.png</video:thumbnail_loc>
+      <video:title>What is a network?</video:title>
+      <video:description>Two devices and one cable is all it takes. From your home Wi-Fi to the whole internet, it&#x27;s networks all the way up.</video:description>
+      <video:content_loc>https://bytesizedacademy.org/2026-10-11-ep01/video.mp4</video:content_loc>
+      <video:duration>56</video:duration>
+      <video:publication_date>2026-10-11T00:00:00-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <image:image><image:loc>https://bytesizedacademy.org/2026-10-11-ep01/thumbnail.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://bytesizedacademy.org/lessons/router-vs-switch-vs-modem/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://bytesizedacademy.org/2026-10-11-ep02/thumbnail.png</video:thumbnail_loc>
+      <video:title>Router vs switch vs modem</video:title>
+      <video:description>That &quot;router&quot; on your shelf is usually three devices in a trench coat. Here&#x27;s what each one does.</video:description>
+      <video:content_loc>https://bytesizedacademy.org/2026-10-11-ep02/video.mp4</video:content_loc>
+      <video:duration>61</video:duration>
+      <video:publication_date>2026-10-11T00:00:00-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <image:image><image:loc>https://bytesizedacademy.org/2026-10-11-ep02/thumbnail.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://bytesizedacademy.org/lessons/what-is-an-ip-address/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://bytesizedacademy.org/2026-10-11-ep03/thumbnail.png</video:thumbnail_loc>
+      <video:title>What is an IP address?</video:title>
+      <video:description>Every device online has an address, just like your house. Here&#x27;s how to read one.</video:description>
+      <video:content_loc>https://bytesizedacademy.org/2026-10-11-ep03/video.mp4</video:content_loc>
+      <video:duration>64</video:duration>
+      <video:publication_date>2026-10-11T00:00:00-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <image:image><image:loc>https://bytesizedacademy.org/2026-10-11-ep03/thumbnail.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://bytesizedacademy.org/about/</loc>
+    <lastmod>2026-10-11</lastmod>
+  </url>
+  <url>
+    <loc>https://bytesizedacademy.org/privacy/</loc>
+    <lastmod>2026-10-11</lastmod>
+  </url>
+  <url>
+    <loc>https://bytesizedacademy.org/terms/</loc>
+    <lastmod>2026-10-11</lastmod>
+  </url>
+</urlset>

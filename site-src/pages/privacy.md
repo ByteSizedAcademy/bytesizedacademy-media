@@ -1,4 +1,5 @@
 ---
+updated: 2026-10-11
 slug: privacy
 title: Privacy Policy
 eyebrow: Legal

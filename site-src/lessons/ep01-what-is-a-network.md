@@ -1,6 +1,8 @@
 ---
 ep: 01
 slug: what-is-a-network
+seo_title: What Is a Network? Computer Networking Explained Simply
+duration: PT56S
 title: What is a network?
 series: Network Bytes
 series_blurb: Networking from zero, one minute at a time. Follows the Cisco CCNA 200-301 exam topics.
@@ -56,3 +58,17 @@ This lesson lines up with CCNA 200-301 exam topic **1.1, network components**. Y
 - Cisco, ["What Is Computer Networking?"](https://www.cisco.com/site/us/en/learn/topics/networking/what-is-computer-networking.html): home and office networks, LANs and WANs, devices from PCs to thermostats
 - Cloudflare Learning Center, ["How does the Internet work?"](https://www.cloudflare.com/learning/network-layer/how-does-the-internet-work/): the internet as interconnected networks
 - Cisco, [CCNA 200-301 v1.1 exam topics](https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301-CCNA-v1.1.pdf): 1.1 network components
+
+## Transcript
+
+Two computers and one cable. Congratulations, you just built a network.
+
+That's really all a network is: devices that can talk to each other and share things. Files, printers, a video stream, a game lobby.
+
+Your home is a network. Your phone, your TV, your laptop and maybe even your fridge all talk through one box on your shelf. Your school or office is a bigger one, with hundreds of devices and a lot more cables running through the walls and ceilings.
+
+Now take millions of those home and office networks and connect them all together, across cities, oceans and continents, using cables, satellites and giant data centers.
+
+That's the internet. It isn't one single thing. It's a network of networks.
+
+That's your bite. Next: what's actually inside that box on your shelf.

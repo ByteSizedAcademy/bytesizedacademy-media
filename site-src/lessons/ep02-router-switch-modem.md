@@ -1,6 +1,8 @@
 ---
 ep: 02
 slug: router-vs-switch-vs-modem
+seo_title: Router vs Switch vs Modem: What's the Difference?
+duration: PT1M1S
 title: Router vs switch vs modem
 series: Network Bytes
 series_blurb: Networking from zero, one minute at a time. Follows the Cisco CCNA 200-301 exam topics.
@@ -61,3 +63,17 @@ Wi-Fi and the internet aren't the same thing. Wi-Fi is just a wireless way to jo
 - Cisco, ["What is a switch vs a router?"](https://www.cisco.com/site/us/en/learn/topics/small-business/network-switch-vs-router.html): switches connect devices, routers connect networks and provide internet access
 - CableLabs, ["A 101 on DOCSIS Technology"](https://www.cablelabs.com/blog/a-101-on-docsis-technology-the-heart-of-cable-broadband): the cable modem translates the provider's signal
 - Cisco, [CCNA 200-301 v1.1 exam topics](https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301-CCNA-v1.1.pdf): 1.1 routers, switches and access points
+
+## Transcript
+
+That "router" on your shelf? It's usually three devices in a trench coat.
+
+Let's open it up. First, the modem. Your internet provider sends a signal down a cable or fiber line. The modem translates that into something your home network understands.
+
+Next, the switch. It connects the devices inside your home and makes sure each packet goes to the right device, not to everyone.
+
+Then the router. It sits on the border between your home and the internet and decides where traffic goes next. Is this packet for the laptop in the kitchen, or a server in another country?
+
+Most home boxes also have Wi-Fi built in, so your phone can join without a cable. In an office, these are usually separate devices, and those are what network engineers work with every day.
+
+That's your bite. Next: your device's home address.

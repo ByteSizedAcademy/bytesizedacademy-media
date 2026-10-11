@@ -1,4 +1,5 @@
 ---
+updated: 2026-10-11
 slug: terms
 title: Terms of Service
 eyebrow: Legal

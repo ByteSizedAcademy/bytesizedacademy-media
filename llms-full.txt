@@ -1,0 +1,217 @@
+# Byte Sized Academy: full lesson text
+
+> Every lesson from https://bytesizedacademy.org, newest last. Each section is one lesson: its article, sources and video transcript.
+
+## What is a network?
+
+URL: https://bytesizedacademy.org/lessons/what-is-a-network/  
+Series: Network Bytes, episode 1  
+Posted: 2026-10-11  
+Video: https://bytesizedacademy.org/2026-10-11-ep01/video.mp4
+
+Two devices and one cable is all it takes. From your home Wi-Fi to the whole internet, it's networks all the way up.
+
+> **In one bite:** a network is two or more devices connected so they can share information. The internet is just a huge number of those networks connected to each other.
+
+### The smallest network there is
+
+Take two computers and plug one cable between them. Congratulations: you've built a network. That's really all the word means. A **network** is a group of devices that are linked together so they can send information back and forth and share things.
+
+The devices on a network are often called **nodes** or **hosts**. They don't have to be computers. Phones, printers, game consoles, smart TVs, security cameras and even thermostats all join networks today.
+
+### What do devices share?
+
+Once devices are connected, they can share almost anything that can be turned into data:
+
+- **Files**, like photos copied from your phone to your laptop
+- **Devices**, like one printer used by the whole house
+- **An internet connection**, so every device can get online through one box
+- **Live streams**, like a movie playing from a streaming service or a game lobby with your friends
+
+### Networks come in sizes
+
+Your **home** is a network. Your phone, laptop, TV and maybe your fridge all talk through the box on your shelf (episode 2 opens that box up).
+
+A **school or office** is a bigger network, with hundreds or thousands of devices and a lot more cable running through the walls and ceilings. Networks that cover a single home, building or campus are called **local area networks**, or **LANs**.
+
+Networks that stretch across cities or countries, connecting LANs that are far apart, are called **wide area networks**, or **WANs**.
+
+### The internet: a network of networks
+
+Now take millions of home, school and office networks and connect them all together, across cities, oceans and continents, using cables, satellites and giant data centers. That's the internet.
+
+The internet isn't one single machine or one company's network. It's thousands of separate networks, run by internet providers, businesses, universities and governments, that agree to pass each other's traffic along. When you load a website, your data might travel through several of those networks before it reaches you.
+
+### Try it yourself
+
+Open your router's app or your Wi-Fi settings page and look for a list of **connected devices**. Count them. Most homes have far more devices on the network than people expect, and it's a fun way to spot the surprise ones (smart plugs, we're looking at you).
+
+### For CCNA learners
+
+This lesson lines up with CCNA 200-301 exam topic **1.1, network components**. You don't need to memorize anything yet. Just get comfortable with the idea that every network, no matter how big, is devices plus the links between them.
+
+### Sources
+
+- IBM, ["What Is Computer Networking?"](https://www.ibm.com/think/topics/networking): devices linked to share information and resources
+- Cisco, ["What Is Computer Networking?"](https://www.cisco.com/site/us/en/learn/topics/networking/what-is-computer-networking.html): home and office networks, LANs and WANs, devices from PCs to thermostats
+- Cloudflare Learning Center, ["How does the Internet work?"](https://www.cloudflare.com/learning/network-layer/how-does-the-internet-work/): the internet as interconnected networks
+- Cisco, [CCNA 200-301 v1.1 exam topics](https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301-CCNA-v1.1.pdf): 1.1 network components
+
+### Video transcript
+
+Two computers and one cable. Congratulations, you just built a network.
+
+That's really all a network is: devices that can talk to each other and share things. Files, printers, a video stream, a game lobby.
+
+Your home is a network. Your phone, your TV, your laptop and maybe even your fridge all talk through one box on your shelf. Your school or office is a bigger one, with hundreds of devices and a lot more cables running through the walls and ceilings.
+
+Now take millions of those home and office networks and connect them all together, across cities, oceans and continents, using cables, satellites and giant data centers.
+
+That's the internet. It isn't one single thing. It's a network of networks.
+
+That's your bite. Next: what's actually inside that box on your shelf.
+
+## Router vs switch vs modem
+
+URL: https://bytesizedacademy.org/lessons/router-vs-switch-vs-modem/  
+Series: Network Bytes, episode 2  
+Posted: 2026-10-11  
+Video: https://bytesizedacademy.org/2026-10-11-ep02/video.mp4
+
+That "router" on your shelf is usually three devices in a trench coat. Here's what each one does.
+
+> **In one bite:** the **modem** connects your home to your internet provider, the **switch** connects the devices inside your home, and the **router** connects your home network to other networks and decides where traffic goes. Most home boxes do all three, plus Wi-Fi.
+
+### One box, three jobs
+
+The box your internet provider gave you probably says "router" or "gateway" on it. Inside, it's usually doing three different jobs that used to be three separate devices. Let's take them one at a time, following your data from the wall to your laptop.
+
+### The modem: a translator
+
+Your internet provider sends its signal into your home over a cable TV line, a phone line or a fiber line. That signal isn't in a form your laptop understands. The **modem** translates between the two: it turns the provider's signal into normal network data, and back again for anything you send out.
+
+Without a modem, your home network has no way to talk to your provider, so it has no way to reach the internet.
+
+### The switch: connects devices inside
+
+A **switch** connects the devices inside one network to each other. When data arrives for your TV, the switch sends it to the TV only, not to every device in the house. That keeps things fast and tidy.
+
+If you've ever seen a box with a row of identical network ports on the back, that's a switch at work. On a home box, the numbered LAN ports are its built-in switch.
+
+### The router: connects networks
+
+A **router** sits on the border between two networks, like your home and the internet, and decides where each piece of traffic should go next. Is this data for the laptop in the kitchen, or for a server in another country? The router makes that call, over and over, for every packet.
+
+Here's the easy way to keep them apart:
+
+- A **switch** connects **devices** in the same network.
+- A **router** connects **networks** to other networks.
+
+### And Wi-Fi?
+
+Most home boxes also have a **wireless access point** built in. That's the part that lets phones and laptops join the network without a cable. It's another job squeezed into the same box.
+
+### In an office, they split up
+
+In a business, these jobs are usually done by separate, more powerful devices that sit in a rack: a router at the edge, switches connecting the desks, and access points on the ceilings. Those are the devices network engineers (and CCNA students) spend most of their time with.
+
+### Try it yourself
+
+Look at the back of your home internet box. You'll usually find one port that's a different color or labeled **WAN** or **Internet**. That's where the outside world comes in. The group of matching ports labeled **LAN** or numbered 1 to 4 is the built-in switch for your wired devices.
+
+### Common mix-up
+
+Wi-Fi and the internet aren't the same thing. Wi-Fi is just a wireless way to join your home network. If your modem loses its connection to the provider, your phone can still show full Wi-Fi bars and have no internet at all.
+
+### Sources
+
+- Cloudflare Learning Center, ["What is a router?"](https://www.cloudflare.com/learning/network-layer/what-is-a-router/): routers connect networks; modems connect them to the internet
+- Cloudflare Learning Center, ["What is a network switch?"](https://www.cloudflare.com/learning/network-layer/what-is-a-network-switch/): a switch sends data only to the device it's meant for
+- Cisco, ["What is a switch vs a router?"](https://www.cisco.com/site/us/en/learn/topics/small-business/network-switch-vs-router.html): switches connect devices, routers connect networks and provide internet access
+- CableLabs, ["A 101 on DOCSIS Technology"](https://www.cablelabs.com/blog/a-101-on-docsis-technology-the-heart-of-cable-broadband): the cable modem translates the provider's signal
+- Cisco, [CCNA 200-301 v1.1 exam topics](https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301-CCNA-v1.1.pdf): 1.1 routers, switches and access points
+
+### Video transcript
+
+That "router" on your shelf? It's usually three devices in a trench coat.
+
+Let's open it up. First, the modem. Your internet provider sends a signal down a cable or fiber line. The modem translates that into something your home network understands.
+
+Next, the switch. It connects the devices inside your home and makes sure each packet goes to the right device, not to everyone.
+
+Then the router. It sits on the border between your home and the internet and decides where traffic goes next. Is this packet for the laptop in the kitchen, or a server in another country?
+
+Most home boxes also have Wi-Fi built in, so your phone can join without a cable. In an office, these are usually separate devices, and those are what network engineers work with every day.
+
+That's your bite. Next: your device's home address.
+
+## What is an IP address?
+
+URL: https://bytesizedacademy.org/lessons/what-is-an-ip-address/  
+Series: Network Bytes, episode 3  
+Posted: 2026-10-11  
+Video: https://bytesizedacademy.org/2026-10-11-ep03/video.mp4
+
+Every device online has an address, just like your house. Here's how to read one.
+
+> **In one bite:** an IP address tells the network where to deliver data, the way a street address tells the mail carrier where to drop off a letter. A common kind looks like `192.168.1.25`.
+
+### An address for every device
+
+Every device that talks on a network needs an address, so data sent to it ends up in the right place. On networks and the internet, that's the **IP address** (IP stands for Internet Protocol, the set of rules for addressing and delivering data).
+
+Think of the mail. A letter without an address can't be delivered. Data is the same: no address, no delivery.
+
+### How to read one
+
+The most common kind, called **IPv4**, is written as four numbers separated by dots:
+
+`192.168.1.25`
+
+Each of the four numbers can be anything from **0 to 255**. Why 255? Behind the scenes an IPv4 address is 32 bits (ones and zeros), split into four groups of 8 bits. Eight bits can count 256 different values, from 0 up to 255.
+
+The address has two parts:
+
+- The first part names the **network**, like the street. In `192.168.1.25`, that's usually `192.168.1`.
+- The last part names the **device** on that network, like the house number. Here, that's `25`.
+
+Every device on the same home network shares the "street" part and gets its own "house number."
+
+### Where do addresses come from?
+
+You almost never type one in yourself. When your phone joins your Wi-Fi, your router hands it an address automatically and remembers it for a while. That's called a **lease**. Leave home and come back tomorrow, and your phone may get a different address. Addresses handed out this way are called **dynamic**. Addresses that are set by hand and never change, which servers and printers often use, are called **static**.
+
+### Try it yourself
+
+Open your phone's Wi-Fi settings and tap the network you're connected to. Look for **IP address**. It will probably start with `192.168` or `10.`, which are ranges set aside for home and office networks. Why those numbers show up everywhere is a whole lesson of its own, coming soon in this series.
+
+### Good to know
+
+- This lesson covers **IPv4**. There's a newer, much longer kind of address called **IPv6**, made because the world was running out of IPv4 addresses. It gets its own episode later in the series.
+- "First part network, last part device" is a simplification. The exact split is set by something called a **subnet mask**, which we'll cover when we get to subnetting.
+- The automatic hand-out is done by a service called **DHCP**, which also gets its own episode.
+
+### For CCNA learners
+
+This lines up with CCNA 200-301 exam topic **1.6, configure and verify IPv4 addressing and subnetting**. For now, get comfortable reading an address as four numbers from 0 to 255, with a network part and a device part.
+
+### Sources
+
+- Cloudflare Learning Center, ["What is my IP address?"](https://www.cloudflare.com/learning/dns/glossary/what-is-my-ip-address/): IP addresses identify devices online; IPv4 is four numbers separated by dots; dynamic addresses are temporary
+- IETF, [RFC 791, "Internet Protocol"](https://datatracker.ietf.org/doc/html/rfc791): IPv4 addresses are 32 bits, written as four 8-bit numbers from 0 to 255
+- Microsoft Learn, ["What is DHCP?"](https://learn.microsoft.com/en-us/windows-server/networking/technologies/dhcp/dhcp-top): addresses are handed out automatically and leased, so they can change
+- Cisco, [CCNA 200-301 v1.1 exam topics](https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301-CCNA-v1.1.pdf): 1.6 configure and verify IPv4 addressing
+
+### Video transcript
+
+Every device on the internet has an address, just like your house.
+
+It's called an IP address. It tells the network where to deliver your data, the same way a street address tells the mail carrier where to drop off a letter.
+
+A common type looks like this: four numbers separated by dots, like 192.168.1.25. Each number goes from 0 to 255. The first part usually names the network, like your street. The last part names the device, like your house number.
+
+You almost never type one yourself. When your phone joins your Wi-Fi, the router hands it an address automatically. Leave and come back tomorrow, and you might get a different one.
+
+No address, no delivery. That's why every device online needs one.
+
+That's your bite. Next: the second address your device has, built in at the factory.

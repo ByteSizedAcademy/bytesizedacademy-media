@@ -13,11 +13,15 @@ Standard library only. If Pillow is installed it also writes small card images t
 ## Add a lesson (one per posted episode)
 
 1. Make sure the episode folder (`YYYY-MM-DD-epNN/` with `video.mp4` and `thumbnail.png`) is in the repo.
-2. Copy a file in `site-src/lessons/` to `epNN-<slug>.md` and fill in the front matter: `ep`, `slug`, `title`, `series`, `series_blurb`, `topic`, `date` (post date), `summary`, `video`, `poster`, `instagram` (reel link, once posted) and optionally `next_title` (shown as "Coming next" on the newest lesson; remove it from the previous lesson).
-3. Write the article: an `> **In one bite:**` callout, then `##` sections that go a little deeper than the script (key terms, a "Try it yourself", common mix-ups, the CCNA tie-in), and a final `## Sources` list matching `sources/epNN.md`.
+2. Copy a file in `site-src/lessons/` to `epNN-<slug>.md` and fill in the front matter: `ep`, `slug`, `title`, `series`, `series_blurb`, `topic`, `date` (post date), `summary`, `video`, `poster`, `instagram` (reel link, once posted) `seo_title` (the search-result title, under about 60 characters, phrased the way people search, e.g. "What Is an IP Address? IP Addresses Explained Simply"), `duration` (video length as ISO 8601, e.g. `PT1M4S`, from `ffprobe`) and optionally `next_title` (shown as "Coming next" on the newest lesson; remove it from the previous lesson) and `description` (search snippet; defaults to the summary).
+3. Write the article: an `> **In one bite:**` callout, then `##` sections that go a little deeper than the script (key terms, a "Try it yourself", common mix-ups, the CCNA tie-in), then `## Sources` matching `sources/epNN.md`, and last a `## Transcript` with the voiceover text (`animations/audio/epNN-vo.txt`, numbers written as digits).
 4. Run the build and commit everything it changed.
 
 Markdown supported: `##`/`###` headings, paragraphs, `-` and `1.` lists, `>` callouts, `**bold**`, `*italic*`, `` `code` ``, `[links](url)`.
+
+## SEO the build takes care of
+
+Every build regenerates, for every lesson: JSON-LD structured data (Organization, WebSite, Article, VideoObject with transcript and duration, BreadcrumbList), Open Graph and Twitter tags with a 1200x630 share image in `assets/og/`, descriptive alt text, `sitemap.xml` with video and image entries, `robots.txt`, `llms.txt` and `llms-full.txt` (the full text of every lesson for AI assistants), and `site.webmanifest`. After the site is live, add it to Google Search Console and submit the sitemap.
 
 ## Other pages
 

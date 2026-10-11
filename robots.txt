@@ -1,3 +1,6 @@
+# Byte Sized Academy: everyone is welcome to crawl, including AI assistants.
 User-agent: *
 Allow: /
+Disallow: /site-src/
+
 Sitemap: https://bytesizedacademy.org/sitemap.xml

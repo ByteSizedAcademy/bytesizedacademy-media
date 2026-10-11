@@ -1,4 +1,5 @@
 ---
+updated: 2026-10-11
 slug: about
 title: About Byte Sized Academy
 eyebrow: About
