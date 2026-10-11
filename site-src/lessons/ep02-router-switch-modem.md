@@ -56,6 +56,36 @@ Look at the back of your home internet box. You'll usually find one port that's 
 
 Wi-Fi and the internet aren't the same thing. Wi-Fi is just a wireless way to join your home network. If your modem loses its connection to the provider, your phone can still show full Wi-Fi bars and have no internet at all.
 
+## Quiz
+
+### Which device translates your internet provider's signal for your home network?
+- [x] Modem
+- [ ] Switch
+- [ ] Router
+- [ ] Printer
+> The modem is the translator between your provider's line and your home network.
+
+### What does a switch do?
+- [ ] Connects your home to your internet provider
+- [x] Connects devices inside one network and sends data only to the device it's meant for
+- [ ] Decides which network traffic should go to next
+- [ ] Turns Wi-Fi on and off
+> A switch connects devices in the same network. On a home box, the LAN ports are its built-in switch.
+
+### Which device connects different networks, like your home and the internet?
+- [ ] Switch
+- [ ] Modem
+- [x] Router
+- [ ] Keyboard
+> Switches connect devices. Routers connect networks and decide where traffic goes next.
+
+### Your phone shows full Wi-Fi bars, but nothing will load. What's a likely cause?
+- [x] Your home network is fine, but the connection to your internet provider is down
+- [ ] Wi-Fi and the internet are the same thing, so this can't happen
+- [ ] Your switch is sending data too fast
+- [ ] Your phone has too many apps
+> Wi-Fi only connects you to your home network. If the modem loses your provider, the bars stay full but the internet is gone.
+
 ## Sources
 
 - Cloudflare Learning Center, ["What is a router?"](https://www.cloudflare.com/learning/network-layer/what-is-a-router/): routers connect networks; modems connect them to the internet

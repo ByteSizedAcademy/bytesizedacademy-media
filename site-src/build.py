@@ -203,6 +203,7 @@ def page(title, body, *, path, description, image=None, image_alt=None, kind="we
 <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css">
 <script type="application/ld+json">{ld}</script>
+<script src="/assets/js/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -347,7 +348,7 @@ def og_image(dest_rel, eyebrow, title, side_image, sub="Explained in one minute 
 
 def lesson_card(l, heading="h3", eager=False):
     loading = 'fetchpriority="high"' if eager else 'loading="lazy"'
-    return f"""<a class="card" href="/lessons/{l['slug']}/">
+    return f"""<a class="card" href="/lessons/{l['slug']}/" data-slug="{l['slug']}">
   <span class="card-media"><img src="{l['card']}" alt="{esc(l['cover_alt'])}" {loading} decoding="async" width="540" height="960"><span class="play" aria-hidden="true"></span></span>
   <span class="card-body">
     <span class="eyebrow">{esc(l['series'])} · EP{l['ep']}</span>
@@ -384,6 +385,74 @@ def video_ld(l):
     if l.get("instagram"):
         v["sameAs"] = l["instagram"]
     return v
+
+
+def parse_quiz(md):
+    """### Question / - [x] right / - [ ] wrong / > explanation"""
+    qs = []
+    for line in md.splitlines():
+        s = line.strip()
+        if s.startswith("### "):
+            qs.append({"q": s[4:], "options": [], "answer": None, "explain": ""})
+        elif qs and re.match(r"- \[[ xX]\] ", s):
+            if s[3] in "xX":
+                qs[-1]["answer"] = len(qs[-1]["options"])
+            qs[-1]["options"].append(s[6:])
+        elif qs and s.startswith(">"):
+            qs[-1]["explain"] = (qs[-1]["explain"] + " " + s[1:].strip()).strip()
+    for q in qs:
+        if q["answer"] is None or len(q["options"]) < 2:
+            raise SystemExit(f"Quiz question needs 2+ options and one [x]: {q['q']}")
+    return qs
+
+
+def render_quiz(l):
+    qs = l["quiz"]
+    fields = []
+    for i, q in enumerate(qs):
+        opts = "".join(
+            f'<label class="opt"><input type="radio" name="q{i + 1}" value="{j}"><span>{inline(o)}</span></label>'
+            for j, o in enumerate(q["options"]))
+        fields.append(f"""<fieldset class="q" data-answer="{q['answer']}">
+  <legend><span class="qn">{i + 1}</span>{inline(q['q'])}</legend>
+  {opts}
+  <p class="explain" hidden><strong class="verdict"></strong> {inline(q['explain'])}</p>
+</fieldset>""")
+    answers = "".join(f"<li>{inline(q['q'])} <strong>{inline(q['options'][q['answer']])}</strong>. {inline(q['explain'])}</li>" for q in qs)
+    return f"""<section class="quiz" id="test-your-knowledge" aria-labelledby="quiz-h" data-quiz="{l['slug']}">
+  <p class="eyebrow">Test your knowledge</p>
+  <h2 id="quiz-h">Quick quiz: {esc(l['title'])}</h2>
+  <p class="muted">{len(qs)} multiple-choice questions. Pick one answer for each, then check how you did.</p>
+  <form class="quiz-form" novalidate>
+{''.join(fields)}
+    <div class="quiz-actions">
+      <button type="submit" class="btn">Check my answers</button>
+      <button type="button" class="btn btn-ghost" data-retry hidden>Try again</button>
+      <p class="score" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+  <noscript><details class="quiz-answers"><summary>Show the answers</summary><ol>{answers}</ol></details></noscript>
+</section>"""
+
+
+def quiz_ld(l):
+    return {
+        "@type": "Quiz",
+        "@id": f"{l['url']}#quiz",
+        "name": f"Quiz: {l['title']}",
+        "about": {"@type": "Thing", "name": l["title"]},
+        "educationalLevel": "Beginner",
+        "inLanguage": "en-US",
+        "isAccessibleForFree": True,
+        "hasPart": [{
+            "@type": "Question",
+            "eduQuestionType": "Multiple choice",
+            "learningResourceType": "Practice problem",
+            "text": q["q"],
+            "acceptedAnswer": {"@type": "Answer", "text": q["options"][q["answer"]], "answerExplanation": {"@type": "Comment", "text": q["explain"]}},
+            "suggestedAnswer": [{"@type": "Answer", "text": o} for j, o in enumerate(q["options"]) if j != q["answer"]],
+        } for q in l["quiz"]],
+    }
 
 
 # ---------- pages ----------
@@ -434,6 +503,8 @@ def build_lesson(l, prev, nxt):
         video_ld(l),
         breadcrumbs([("Lessons", "/lessons/"), (l["series"], series_path), (l["title"], f"/lessons/{l['slug']}/")]),
     ]
+    if l.get("quiz"):
+        graph.append(quiz_ld(l))
     body = f"""<article class="lesson wrap">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/lessons/">Lessons</a><span aria-hidden="true">/</span><a href="{series_path}">{esc(l['series'])}</a></nav>
   <div class="lesson-grid">
@@ -450,10 +521,11 @@ def build_lesson(l, prev, nxt):
       <p class="eyebrow">{esc(l['series'])} · Episode {int(l['ep'])}{(' · ' + esc(l['topic'])) if l.get('topic') else ''}</p>
       <h1>{esc(l['title'])}</h1>
       <p class="lede">{esc(l['summary'])}</p>
-      <p class="meta muted">Posted <time datetime="{l['date']}">{posted}</time> · About a 1 minute watch, {l['read_min']} minute read</p>
+      <p class="meta muted">Posted <time datetime="{l['date']}">{posted}</time> · About a 1 minute watch, {l['read_min']} minute read{' · <a href="#test-your-knowledge">Take the quiz</a>' if l.get('quiz') else ''}</p>
       <div class="prose">
 {markdown(l['body'])}
       </div>
+      {render_quiz(l) if l.get("quiz") else ""}
       {sources}
       {transcript}
       <aside class="support">
@@ -681,6 +753,8 @@ def main():
         l = read_doc(path)
         l["body"], l["transcript"] = split_section(l["body"], "Transcript")
         l["body"], l["sources_md"] = split_section(l["body"], "Sources")
+        l["body"], quiz_md = split_section(l["body"], "Quiz")
+        l["quiz"] = parse_quiz(quiz_md) if quiz_md else []
         l.setdefault("seo_title", l["title"])
         # Search results show about 60 characters of a title and 155 of a description.
         full = f"{l['seo_title']} | {SITE_NAME}"

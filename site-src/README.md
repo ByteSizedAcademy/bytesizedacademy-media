@@ -14,10 +14,24 @@ Standard library only. If Pillow is installed it also writes small card images t
 
 1. Make sure the episode folder (`YYYY-MM-DD-epNN/` with `video.mp4` and `thumbnail.png`) is in the repo.
 2. Copy a file in `site-src/lessons/` to `epNN-<slug>.md` and fill in the front matter: `ep`, `slug`, `title`, `series`, `series_blurb`, `topic`, `date` (post date), `summary`, `video`, `poster`, `instagram` (reel link, once posted) `seo_title` (the search-result title, under about 60 characters, phrased the way people search, e.g. "What Is an IP Address? IP Addresses Explained Simply"), `duration` (video length as ISO 8601, e.g. `PT1M4S`, from `ffprobe`) and optionally `next_title` (shown as "Coming next" on the newest lesson; remove it from the previous lesson) and `description` (search snippet; defaults to the summary).
-3. Write the article: an `> **In one bite:**` callout, then `##` sections that go a little deeper than the script (key terms, a "Try it yourself", common mix-ups, the CCNA tie-in), then `## Sources` matching `sources/epNN.md`, and last a `## Transcript` with the voiceover text (`animations/audio/epNN-vo.txt`, numbers written as digits).
+3. Write the article: an `> **In one bite:**` callout, then `##` sections that go a little deeper than the script (key terms, a "Try it yourself", common mix-ups, the CCNA tie-in), then a `## Quiz` ("Test your knowledge", 3 to 5 multiple-choice questions, format below), then `## Sources` matching `sources/epNN.md`, and last a `## Transcript` with the voiceover text (`animations/audio/epNN-vo.txt`, numbers written as digits).
 4. Run the build and commit everything it changed.
 
 Markdown supported: `##`/`###` headings, paragraphs, `-` and `1.` lists, `>` callouts, `**bold**`, `*italic*`, `` `code` ``, `[links](url)`.
+
+## Quiz format
+
+```
+## Quiz
+
+### What does an IP address do?
+- [x] Tells the network where to deliver data
+- [ ] Stores your passwords
+- [ ] Makes your Wi-Fi faster
+> One-sentence explanation shown after checking.
+```
+
+One `###` per question, one `- [x]` correct option, mix up where the right answer sits, and only ask about things the lesson actually teaches. Scores are saved in the visitor's browser only (`assets/js/site.js`) and show as badges on lesson cards.
 
 ## SEO the build takes care of
 

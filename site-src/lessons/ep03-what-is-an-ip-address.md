@@ -55,6 +55,36 @@ Open your phone's Wi-Fi settings and tap the network you're connected to. Look f
 
 This lines up with CCNA 200-301 exam topic **1.6, configure and verify IPv4 addressing and subnetting**. For now, get comfortable reading an address as four numbers from 0 to 255, with a network part and a device part.
 
+## Quiz
+
+### What does an IP address do?
+- [x] Tells the network where to deliver data
+- [ ] Stores your passwords
+- [ ] Makes your Wi-Fi faster
+- [ ] Names your Wi-Fi network
+> Like a street address for mail, an IP address tells the network where your data should go.
+
+### Which of these is a valid IPv4 address?
+- [ ] 192.168.1.256
+- [x] 192.168.1.25
+- [ ] 192.168.1
+- [ ] 192-168-1-25
+> An IPv4 address is four numbers from 0 to 255, separated by dots. 256 is too big, and three numbers isn't enough.
+
+### On a home network, which part of 192.168.1.25 usually names the device?
+- [ ] 192
+- [ ] 192.168.1
+- [x] 25
+- [ ] 168
+> The first part (192.168.1) usually names the network, like a street. The last part (25) names the device, like a house number.
+
+### How does your phone usually get its IP address when it joins Wi-Fi?
+- [ ] You type it in every time
+- [x] The router hands one out automatically
+- [ ] It's printed on the box and never changes
+- [ ] The phone makes one up at random
+> The router hands out addresses automatically (using a service called DHCP), so your address can change from day to day.
+
 ## Sources
 
 - Cloudflare Learning Center, ["What is my IP address?"](https://www.cloudflare.com/learning/dns/glossary/what-is-my-ip-address/): IP addresses identify devices online; IPv4 is four numbers separated by dots; dynamic addresses are temporary

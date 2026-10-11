@@ -52,6 +52,36 @@ Open your router's app or your Wi-Fi settings page and look for a list of **conn
 
 This lesson lines up with CCNA 200-301 exam topic **1.1, network components**. You don't need to memorize anything yet. Just get comfortable with the idea that every network, no matter how big, is devices plus the links between them.
 
+## Quiz
+
+### What is a network?
+- [x] Two or more devices connected so they can share information
+- [ ] Only the internet
+- [ ] A single computer with Wi-Fi turned on
+- [ ] A special kind of cable
+> Even two computers joined by one cable make a network.
+
+### Which of these can join a network?
+- [ ] Only laptops and desktop computers
+- [ ] Only phones and laptops
+- [x] Almost any connected device, like phones, printers, TVs and thermostats
+- [ ] Only servers in data centers
+> Today almost anything with a chip and a connection can join: printers, TVs, cameras, even fridges.
+
+### A network that covers one home, school or office building is called a...
+- [x] LAN (local area network)
+- [ ] WAN (wide area network)
+- [ ] URL
+- [ ] Browser
+> LANs cover a single place. WANs connect networks that are far apart.
+
+### What is the internet?
+- [ ] One giant computer owned by a single company
+- [x] A network of networks, connected all over the world
+- [ ] Your home Wi-Fi
+- [ ] A single website
+> The internet is millions of separate networks that agree to pass each other's traffic along.
+
 ## Sources
 
 - IBM, ["What Is Computer Networking?"](https://www.ibm.com/think/topics/networking): devices linked to share information and resources

@@ -14,6 +14,7 @@ This policy explains what information Byte Sized Academy ("we", "us") handles wh
 
 - We don't use cookies, analytics, advertising trackers or social media widgets on this site.
 - There are no accounts, sign-ups or forms, so we don't ask for any personal information.
+- Lesson quizzes save your scores only in your own browser (local storage), so you can see your progress. They're never sent to us, and you can clear them anytime by clearing this site's data in your browser.
 - Our fonts and videos are served from this site itself, not from third-party services.
 - The site is hosted on **GitHub Pages**. Like any web host, GitHub may process technical data such as your IP address when your browser requests a page, for security and to keep the service running. See the [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
