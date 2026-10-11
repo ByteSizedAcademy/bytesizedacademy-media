@@ -16,3 +16,7 @@ One folder per post, named `YYYY-MM-DD-epNN` (the post date, Pacific time, and t
 The website at **[bytesizedacademy.org](https://bytesizedacademy.org)** lives in [ByteSizedAcademy/bytesizedacademy](https://github.com/ByteSizedAcademy/bytesizedacademy) and plays these videos from **media.bytesizedacademy.org** (this repo, served by GitHub Pages).
 
 Files are added automatically by the posting script in the production pipeline. Please don't rename or delete folders of posted episodes, since Instagram may re-fetch them.
+
+## Brand
+
+The cookie logo lives in `brand/` for anything that needs a link to it (Auth0's login page, social profiles): `logo.png` (1080x1080), `logo-512.png`, `logo-256.png` and `logo.svg`, served at `https://media.bytesizedacademy.org/brand/<file>`.
