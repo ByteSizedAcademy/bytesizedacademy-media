@@ -141,3 +141,12 @@ a.series:hover{border-color:var(--primary);color:var(--text)}
 .pager-next{grid-column:2;text-align:right}
 .pager .is-soon{border-style:dashed}
 @media (max-width:520px){.pager{grid-template-columns:1fr}.pager-next{grid-column:1}}
+
+/* support (Ko-fi) */
+.heart{flex:none}
+@media (max-width:520px){.nav-follow{display:none}}
+.footer-row .btn{margin-top:14px}
+.support{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:28px;padding:20px 22px;border-radius:var(--radius);border:1px solid rgba(255,122,26,.45);background:linear-gradient(135deg,rgba(255,122,26,.16),var(--panel) 70%)}
+.support div{display:flex;flex-direction:column;gap:4px;flex:1 1 260px}
+.support b{font:700 1.2rem/1.2 var(--display)}
+.support span{color:#EADBC8;font-size:.97rem}

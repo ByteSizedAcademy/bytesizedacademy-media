@@ -25,6 +25,8 @@ TAGLINE = "Your one-minute classroom"
 CURRENT = ' aria-current="page"'
 INSTAGRAM = "https://www.instagram.com/bytesizedacademyeducation/"
 EMAIL = "info@bytesizedacademy.org"
+KOFI = "https://ko-fi.com/bytesizedacademy"
+HEART = '<svg class="heart" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.9-9.2C.5 8.6 2.3 4.5 6.1 4.1c2.2-.2 4 1 5.9 3.1 1.9-2.1 3.7-3.3 5.9-3.1 3.8.4 5.6 4.5 4 7.7C19.5 16.4 12 21 12 21z"/></svg>'
 
 
 # ---------- tiny markdown ----------
@@ -105,7 +107,7 @@ def read_doc(path):
             if ":" in line:
                 k, v = line.split(":", 1)
                 meta[k.strip()] = v.strip()
-    meta["body"] = body.strip()
+    meta["body"] = body.strip().replace("{{KOFI}}", KOFI)
     meta["source"] = path.name
     return meta
 
@@ -151,7 +153,7 @@ def page(title, body, *, path, description, image="/assets/img/cookie-256.png", 
 <header class="site-header">
   <div class="wrap header-row">
     <a class="brand" href="/"><img src="/assets/img/cookie-256.png" alt="" width="36" height="36"><span>Byte Sized <b>Academy</b></span></a>
-    <nav class="site-nav" aria-label="Main">{links}<a class="btn btn-small" href="{INSTAGRAM}" rel="noopener" target="_blank">Follow</a></nav>
+    <nav class="site-nav" aria-label="Main">{links}<a class="nav-follow" href="{INSTAGRAM}" rel="noopener" target="_blank">Instagram</a><a class="btn btn-small" href="{KOFI}" rel="noopener" target="_blank">{HEART}Support</a></nav>
   </div>
 </header>
 <main id="main">
@@ -162,11 +164,14 @@ def page(title, body, *, path, description, image="/assets/img/cookie-256.png", 
     <div>
       <a class="brand" href="/"><img src="/assets/img/cookie-256.png" alt="" width="28" height="28"><span>Byte Sized <b>Academy</b></span></a>
       <p class="muted">{TAGLINE}. Big topics explained simply, in one minute or less.</p>
+      <p class="muted">Our lessons are free and ad-free. If they help you, you can chip in to keep them coming.</p>
+      <a class="btn btn-small" href="{KOFI}" rel="noopener" target="_blank">{HEART}Support us on Ko-fi</a>
     </div>
     <nav aria-label="Footer">
       <a href="/lessons/">Lessons</a>
       <a href="/about/">About</a>
       <a href="{INSTAGRAM}" rel="noopener" target="_blank">Instagram</a>
+      <a href="{KOFI}" rel="noopener" target="_blank">Ko-fi</a>
       <a href="mailto:{EMAIL}">{EMAIL}</a>
       <a href="/privacy/">Privacy</a>
       <a href="/terms/">Terms</a>
@@ -271,6 +276,10 @@ def build_lesson(l, prev, nxt):
 {markdown(l['body'])}
       </div>
       {sources}
+      <aside class="support">
+        <div><b>Enjoyed this bite?</b><span>Byte Sized Academy is free and ad-free. A small tip helps us make the next lesson.</span></div>
+        <a class="btn" href="{KOFI}" rel="noopener" target="_blank">{HEART}Support on Ko-fi</a>
+      </aside>
       <nav class="pager" aria-label="More lessons">{''.join(pager)}</nav>
     </div>
   </div>

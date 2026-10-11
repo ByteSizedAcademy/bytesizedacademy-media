@@ -23,6 +23,10 @@ Lessons are written and produced with help from AI tools, including the narratio
 
 New lessons post on Instagram at [@bytesizedacademyeducation](https://www.instagram.com/bytesizedacademyeducation/), and they all live here on the [lessons page](/lessons/).
 
+## Support free learning
+
+Byte Sized Academy is free, with no ads and no paywall. If our lessons help you, you can support the channel with a tip on [Ko-fi]({{KOFI}}). Every bit goes toward making more lessons.
+
 ## Contact
 
 Questions, corrections or ideas for a lesson: [info@bytesizedacademy.org](mailto:info@bytesizedacademy.org).
